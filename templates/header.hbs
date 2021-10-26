@@ -1,5 +1,5 @@
 <header class="header">
-  <div class="header-logo">
+  <div class="logo">
     {{#link 'help_center'}}
       <img src="{{settings.logo}}" alt="{{t 'home_page' name=help_center.name}}" />
       {{#if settings.show_brand_name}}
@@ -19,10 +19,10 @@
 
   <div class="header-desktop-menu">
     <nav class="user-nav" id="user-nav">
+      {{link "new_request" class="submit-a-request" role="button"}}
       {{#if help_center.community_enabled}}
       {{link 'community'}}
       {{/if}}
-      {{link 'new_request'}}
     </nav>
     {{#if signed_in}}
     <div class="user-info dropdown">
